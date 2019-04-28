@@ -10,7 +10,7 @@
 /build
 
 # apiKeys
-/src/config/apiKeys.json
+/src/config/apiKey.json
 
 # misc
 .DS_Store

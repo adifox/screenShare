@@ -18,7 +18,6 @@ firebase.firestore();
 
 const storage = firebase.storage();
 
-
 export {
   storage, firebase as default
 };

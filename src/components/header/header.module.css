@@ -1,0 +1,158 @@
+.header{
+  /* height: 732px; */
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../assets/images/office-picture1.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.headerOverlay{
+  /* height: 732px; */
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(15, 108, 181, 0.5);
+}
+/**/
+.appHeader{
+  min-height: 60px;
+  padding: 20px 20px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.appHeader a{
+  float: left;
+  color:white;
+  text-align: center;
+  padding: 7px 20px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.appLogo{
+  /* animation: app-logo-spin infinite 20s linear; */
+  height: 50px;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+.appTitle {
+  font-size: 40px;
+  font-weight: bold;
+}
+/**/
+.loginArea{
+  float: right;
+}
+.loginArea a{
+  font-size: 20px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  margin-left: 10px;
+}
+.login{
+  border: 1px solid white;
+  background: transparent;
+}
+.login:hover{
+  border: 1px solid rgb(214, 214, 214);
+  color: rgb(214, 214, 214);
+}
+.signup{
+  background-color: rgb(49, 134, 184);
+  border: 1px solid rgb(49, 134, 184);
+  font-weight: bold;
+}
+.signup:hover{
+  background-color: rgb(38, 158, 219);
+  border: 1px solid rgb(38, 158, 219);
+  font-weight: bold;
+}
+/**/
+.appIntro{
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.appIntro p{
+  font-size: 20px;
+}
+.appIntro a{
+  color:white;
+  padding: 7px 20px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.appIntroText{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.enter{
+  text-decoration: underline !important;
+  margin-top: 20px;
+}
+.alreadyUser{
+  margin-top: 200px;
+}
+/**/
+@media screen and (max-width: 500px){
+  .header, .headerOverlay {
+    height: 590px;
+  }
+  .appHeader a{
+    float: none;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .loginArea{
+    float: none;
+    margin-top: 20px;
+  }
+  .appHeader{
+    min-height: 60px;
+    padding: 10px 20px;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .appIntro h1{
+    font-size: 1.777em;
+    line-height: 1.2em;
+    margin-top: 1.6em;
+  }
+  .appLogo{
+    margin-right: 20px;
+  }
+  .alreadyUser{
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 768px){
+  .appIntro h1{
+    font-size: 70px;
+  }
+  .appIntro p{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 960px){
+  .appIntro{
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1200px){
+  .appIntro h1{
+    font-size: 50px;
+  }
+  .appIntro p{
+    font-size: 30px;
+  }
+  .alreadyUser{
+    margin-top: 120px;
+  }
+}
+@keyframes app-logo-spin{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

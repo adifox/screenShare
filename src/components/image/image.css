@@ -1,0 +1,10 @@
+.PictureContainer{
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}

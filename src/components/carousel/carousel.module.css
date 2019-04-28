@@ -1,0 +1,52 @@
+.nextArrow{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0px;
+  box-sizing: border-box;
+  float: right;
+  margin-top: -117px;
+  right: 13px;
+  position: absolute;
+  z-index: 10;
+  vertical-align: middle;
+  color: #7c7c7c;
+}
+.nextArrow i, .prevArrow i {
+  font-size: 41px;
+}
+.prevArrow{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0px!important;
+  box-sizing: border-box;
+  margin-top: 80px;
+  left: 5px;
+  z-index: 10;
+  position: absolute;
+  color: #7c7c7c;
+}
+.nextArrow:hover, .prevArrow:hover{
+  background-color: #299AD2;
+  color: white;
+}
+.carouselSlider{
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+.arrowNoShow{
+  display: none;
+}
+div[class*="slick-slide"]>div:first-child{
+  padding-right: 8px;
+}
+@media screen and (max-width: 980px){
+  .carouselSlider{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "profile": {
+      "lazyLoad": true,
+      "arrowsSmallDesktop": true,
+      "arrowsTablet": false,
+      "arrowsMobile": false,
+      "infiniteDesktop": false,
+      "infiniteSmallDesktop": false,
+      "infiniteTablet": false,
+      "infiniteMobile": false,
+      "slidesToShowDesktop": 4,
+      "slidesToScrollDesktop": 4,
+      "slidesToShowSmallDesktop": 3,
+      "slidesToScrollSmallDesktop": 3,
+      "slidesToShowTablet": 3,
+      "slidesToScrollTablet": 3,
+      "slidesToShowMobile": 1,
+      "slidesToScrollMobile": 1
+    }
+  }
+}

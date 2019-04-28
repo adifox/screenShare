@@ -1,0 +1,186 @@
+.leftContainer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 50%;
+  float: left;
+  /* background: #EFEFEF; */
+  /* background: rgb(15, 108, 181); */
+  /* background: rgb(49, 134, 184); */
+  background-color: rgb(207, 215, 220);
+  /* background-color: #1A8FCE; */
+}
+.registerForm{
+  width: 90%;
+  max-width: 374px;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.2);
+  background: #fff;
+  color: #303030;
+  text-align: center;
+  padding: 5%;
+}
+.registerForm a{
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  transition: .35s;
+}
+.registerForm h2{
+  margin: 20px auto 40px auto;
+}
+.registerLogo{
+  width: 100%;
+  height: 100%;
+  max-width: 50px;
+  max-height: 50px;
+}
+.rightContainer{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  float: right;
+  background: url('../../assets/images/blue-orange-abstract2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+.welcomeLogo{
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 auto;
+  display: block;
+}
+.inputField{
+  width: 100%;
+  margin: 8px 0;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+  border-radius: 0;
+  text-align: left!important;
+  font-size: 1rem;
+  padding: 13px 0 10px;
+  opacity: 1;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-color: #1a8fce;
+}
+/* .formButton{
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 700;
+  padding: 9px 30px;
+  background-color: #E04528;
+  margin: 40px auto;
+  border-radius: 4px; 
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  -webkit-box-shadow: inset 0 -100px 0 transparent;
+  box-shadow: inset 0 -100px 0 transparent;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: .25s;
+  transition: .25s;
+} */
+
+/* Ripple effect */
+.formButton {
+  background-position: center;
+  transition: background 0.8s;
+}
+.formButton:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.formButton:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+
+
+
+
+
+.containerCheckbox{
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  margin: 20px 0;
+}
+.containerCheckbox input{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.containerCheckbox a{
+  text-decoration: underline;
+}
+.appLogo{
+  animation: App-logo-spin infinite 20s linear;
+}
+.alreadyUser a{
+  text-decoration: underline;
+}
+@keyframes App-logo-spin{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media all and (max-width: 960px ){
+  .rightContainer{
+    display: none;
+  }
+  .leftContainer{
+    width: 100%;
+    float: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: url('../../assets/images/blue-orange-abstract1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .registerForm{
+    width: 80vw;
+    padding: 10%;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Player } from 'video-react';
 import { connect } from 'react-redux';
@@ -104,13 +104,14 @@ class Profile extends Component {
 
   render () {
     const { auth, profile } = this.props
+    const { showUploadBox, filesArray, files } = this.state
     let picturesCarouselArray = null
 
     if (!auth.uid) { return  <Redirect to='/' /> }
 
-    if (this.state.filesArray !== null) {
+    if (filesArray !== null) {
       // console.log('THE FILES ARRAY AT CREATING')
-      picturesCarouselArray = this.createImageContent(this.state.filesArray)
+      picturesCarouselArray = this.createImageContent(filesArray)
       setTimeout(
         function() {
           this.setState({ showUploadBox: false })
@@ -118,26 +119,25 @@ class Profile extends Component {
       )
     }
 
-    const uploadContent = this.state.showUploadBox ? (
+    const uploadContent = showUploadBox ? (
       <FileUploader
         auth={ auth }
-        files={ this.state.files }
+        files={ files }
         updateFilesArray={ this.updateFilesArray }
       />
     ) : null
 
 
-    return([
+    return(
+      <Fragment>
         <div className={ styles.navigation }>
           <div className={ styles.logoWrapper }>
             <img src={ logo } className={ styles.appLogo } alt="logo" />
           </div>
-          <p
-            className={ styles.welcomeTitle }
-          >
-            Bienvenido { profile ? profile.username : null }
-          </p>
           <div className={ styles.buttonContent }>
+          <h2 className={ styles.welcomeTitle }>
+            ¿Que quieres hacer?
+          </h2>
           <ul>
             <li>
               <div
@@ -168,7 +168,7 @@ class Profile extends Component {
             </li>
           </ul>
           </div>
-        </div>,
+        </div>
         <div className={ styles.mainPart }>
           {/* <div className={ styles.dashboardHeader }>
             <div className={ styles.searchBox }>
@@ -181,11 +181,16 @@ class Profile extends Component {
             </div>
           </div> */}
           <div className={ styles.imageContainer }>
+            <h3 className={ styles.userName }>
+              Hola, { profile ? profile.username : null }
+            </h3>
             {/* <img className={ styles.coverImage } src={ image } alt="Fuerte-Hoteles"/> */}
           </div>
           <div className={ styles.mainPartContent }>
-            { uploadContent }
-            <h3>Mis videos subidos</h3>
+            <div className={ styles.contentUploader }>
+              { uploadContent }
+            </div>
+            <h3>Mis videos</h3>
             <div className={ styles.videoCarousel }>
               <Carousel
                 sliderSettings={ SLIDER.settings.profile }
@@ -193,7 +198,7 @@ class Profile extends Component {
                 {/* { this.createVideoContent(this.state.videoUrl) } */}
               </Carousel>
             </div>
-            <h3>Mis imagenes subidos</h3>
+            <h3>Mis imagenes</h3>
             <div className={ styles.imageCarousel }>
               <Carousel
                 sliderSettings={ SLIDER.settings.profile }
@@ -207,7 +212,8 @@ class Profile extends Component {
             </div>
           </div>
         </div>
-    ])
+      </Fragment>
+    )
   }
 }
 
